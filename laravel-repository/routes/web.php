@@ -27,8 +27,19 @@ Route::prefix('users')->group(function (){
     Route::post('/update/{id}', 'UserController@update')->name('update.user');
 });
 
+// lession-05
 Route::get('component', 'ComponentController@index')->name('component.example');
 Route::get('viewtemplate', 'ComponentController@viewtemplate')->name('component.viewtemplate');
 Route::get('createtemplate','ComponentController@createtemplate')->name('component.create');
-
 Route::get('testshow','ComponentController@testshow')->name('testshow');
+
+/*
+ * * categories
+ */
+Route::prefix('category')->group(function (){
+    Route::get('/','CategoryController@index')->name('show.cate.list');
+});
+
+Route::prefix('/post/{cate_id}')->group(function(){
+    Route::get('/','PostController@showByCategory')->name('show.post.list');
+});
