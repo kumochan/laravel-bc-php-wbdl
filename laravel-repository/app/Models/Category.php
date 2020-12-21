@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
+
+    public function Post() {
+        return $this->hasMany('App\Models\Post', 'foreign_key', 'id');
+    }
 }
