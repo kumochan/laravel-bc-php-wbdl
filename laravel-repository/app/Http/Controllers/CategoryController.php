@@ -26,7 +26,6 @@ class CategoryController extends Controller
 
     public function update(Request $request,$id)
     {
-//        $category = DB::table('categories')->find($id);
         $category = Category::find($id);
         $category->name = $request->name;
         $category->category_slug = $request->category_slug;
