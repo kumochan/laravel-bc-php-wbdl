@@ -12,6 +12,19 @@
     <!-- endinject -->
     <!-- inject:css -->
     <link rel="stylesheet" href="{{ asset('backend/css/style.css') }}">
+    <style>
+        .grid-margin {
+            margin-bottom: 0.875rem;
+        }
+
+        .content-wrapper {
+            padding-top: 0px;
+        }
+
+        #margin-top-12px {
+            margin-top:12px !important;
+        }
+    </style>
     <!-- endinject -->
     <link rel="shortcut icon" href="{{ asset('backend/images/favicon.png') }}" />
 </head>

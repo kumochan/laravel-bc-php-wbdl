@@ -22,6 +22,8 @@ class CreatePostsTable extends Migration
             $table->string('url');
             $table->string('image');
             $table->string('content');
+            $table->integer('status');
+            $table->string('status_name');
             $table->timestamps();
         });
     }
