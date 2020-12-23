@@ -38,6 +38,8 @@ Route::get('testshow','ComponentController@testshow')->name('testshow');
  */
 Route::prefix('category')->group(function (){
     Route::get('/','CategoryController@index')->name('show.cate.list');
+    Route::get('/edit/{id}','CategoryController@showEdit')->name('show.edit');
+    Route::post('edit/{id}','CategoryController@update')->name('category.edit');
 });
 
 Route::prefix('/post/{cate_id}')->group(function(){

@@ -24,7 +24,9 @@
                                         <td>{{$cate->id}}</td>
                                         <td>{{$cate->name}}</td>
                                         <td>{{$cate->category_slug}}</td>
-                                        <td><label class="badge badge-danger">Pending</label></td>
+                                        <td><label class="badge badge-danger">Pending</label>
+                                            <a class="badge badge-danger" href="{{route('show.edit',$cate->id)}}">Edit</a>
+                                        </td>
                                     </tr>
                                     @endforeach
                                     </tbody>
