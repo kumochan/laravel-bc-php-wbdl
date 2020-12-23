@@ -30,6 +30,8 @@ class PostFactory extends Factory
             'content' => Str::random(100),
             'url' => Str::random(10),
             'image' => Str::random(10),
+            'status' => 1,
+            'status_name' => 'active'
         ];
     }
 }
