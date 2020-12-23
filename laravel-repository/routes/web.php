@@ -47,3 +47,6 @@ Route::prefix('backend/category')->group(function (){
 Route::prefix('backend/post/{cate_id}')->group(function(){
     Route::get('/','Backend\PostController@showByCategory')->name('post.show-index');
 });
+
+Route::get('backend/login', 'LoginController@showLogin')->name('show.login');
+Route::post('backend/login', 'LoginController@login')->name('user.login');
