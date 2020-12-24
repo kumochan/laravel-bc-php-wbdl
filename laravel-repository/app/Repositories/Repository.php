@@ -1,36 +1,17 @@
 <?php
-
+/**
+ * Created by PhpStorm.
+ * User: thaotm
+ * Date: 26/11/2020
+ * Time: 00:01
+ */
 namespace App\Repositories;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Repository implements RepositoryInterface
+interface Repository
 {
-
-    //Implementation
-
-    public function all()
-    {
-        // TODO: Implement all() method.
-    }
-
-    public function create(array $data)
-    {
-        // TODO: Implement create() method.
-    }
-
-    public function update($data, $id)
-    {
-        // TODO: Implement update() method.
-    }
-
-    public function delete($id)
-    {
-        // TODO: Implement delete() method.
-    }
-
-    public function show($id)
-    {
-        // TODO: Implement show() method.
-    }
+    public function getAll();
+    public function findById($id);
+    public function create($data);
+    public function update($data, $object);
+    public function destroy($object);
 }
