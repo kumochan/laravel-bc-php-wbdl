@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>add demo</title>
+  <style>
+
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+
+
+  <p>Added this... (notice no border)</p>
+
+  <p id='temp_max'>this_temp_max</p>
+
+  <script>
+    let url = 'http://api.openweathermap.org/data/2.5/weather?q=Hanoi&appid=98875111208701b956a9e50ee6b5d2e0';
+    var result = '';
+    $.ajax({
+      method: 'get',
+      url: url,
+      async: true //true
+    }).done(function(data){
+      // console.log(response);
+      console.log(data.main);
+      result = data;
+      $('#temp_max').text(data.main.temp_max);
+    })
+    console.log(data);
+    // $.ajax({
+    //   method: "GET",
+    //   url: url,
+    //   //data: { name: "John", location: "Boston" }
+    // })
+    // .done(function( data ) {
+    //   console.log(data);
+    //   console.log(data.main);
+    // });
+  </script>
+
+</body>
+</html>
