@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <!-- Required meta tags -->
@@ -79,12 +79,12 @@
 </div>
 <!-- container-scroller -->
 <!-- plugins:js -->
-<script src="../../vendors/base/vendor.bundle.base.js"></script>
+{{--<script src="../../vendors/base/vendor.bundle.base.js"></script>--}}
 <!-- endinject -->
 <!-- inject:js -->
-<script src="../../js/off-canvas.js"></script>
-<script src="../../js/hoverable-collapse.js"></script>
-<script src="../../js/template.js"></script>
+{{--<script src="../../js/off-canvas.js"></script>--}}
+{{--<script src="../../js/hoverable-collapse.js"></script>--}}
+{{--<script src="../../js/template.js"></script>--}}
 <!-- endinject -->
 </body>
 
