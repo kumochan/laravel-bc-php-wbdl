@@ -13,10 +13,11 @@ class CustomerController extends Controller
         $this->customerService = $customerService;
     }
 
-    public function index()
+    public function customer_index()
     {
         $customers = $this->customerService->getAll();
-        return response()->json($customers, 200);
+        return $customers->count();
+        //return response()->json($customers, 200);
     }
 
     public function show($id)
