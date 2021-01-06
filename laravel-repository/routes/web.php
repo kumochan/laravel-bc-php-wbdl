@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,6 +42,8 @@ Route::get('testshow','ComponentController@testshow')->name('testshow');
 */
 Route::group(['middleware' => 'locale'], function () {
 
+    Route::get('change-language/{language}', 'Controller@changeLanguage')->name('change-language');
+
     /*
      * * categories
      */
@@ -50,10 +53,11 @@ Route::group(['middleware' => 'locale'], function () {
         Route::post('edit/{id}','Backend\CategoryController@edit')->name('category.edit');
         Route::get('/create','Backend\CategoryController@showCreate')->name('category.show-create');
         Route::post('/create','Backend\CategoryController@create')->name('category.create');
-
-        Route::get('change-language/{language}', 'Controller@changeLanguage')->name('change-language');
     });
 
+    /*
+     * * Post
+     */
     Route::prefix('backend/post/{cate_id}')->group(function(){
         Route::get('/','Backend\PostController@showByCategory')->name('post.show-index');
     });
@@ -64,3 +68,10 @@ Route::group(['middleware' => 'locale'], function () {
  */
 Route::get('backend/login', 'LoginController@showLogin')->name('show.login');
 Route::post('backend/login', 'LoginController@login')->name('user.login');
+
+
+// lession-12
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/page-guest', 'HomeController@showPageGuest');
+Route::get('/page-admin', 'HomeController@showPageAdmin');
