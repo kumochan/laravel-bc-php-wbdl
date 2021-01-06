@@ -100,7 +100,7 @@ final class RepositoryBuilder
     /**
      * Return the array of default adapters.
      *
-     * @return \Generator<\Dotenv\Eloquent\Adapter\AdapterInterface>
+     * @return \Generator<\Dotenv\Repository\Adapter\AdapterInterface>
      */
     private static function defaultAdapters()
     {

@@ -29,7 +29,7 @@ final class ArrayAdapter implements AdapterInterface
     /**
      * Create a new instance of the adapter, if it is available.
      *
-     * @return \PhpOption\Option<\Dotenv\Eloquent\Adapter\AdapterInterface>
+     * @return \PhpOption\Option<\Dotenv\Repository\Adapter\AdapterInterface>
      */
     public static function create()
     {
